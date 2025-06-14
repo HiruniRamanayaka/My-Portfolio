@@ -1,14 +1,14 @@
 import React from 'react'
 import {Container} from '@mui/material'
 
-const Skills = () => {
+const Home = () => {
   return (
     <>
-        <Container id="skills">
-            <div>Skills</div>
+        <Container id="home">
+            <div>Home</div>
         </Container>
     </>
   )
 }
 
-export default Skills
+export default Home
