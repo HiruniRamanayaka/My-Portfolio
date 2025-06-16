@@ -14,8 +14,6 @@ const sections = [
   'projects',
   'skills',
   'blogs',
-  'achievements',
-  'education',
   'contact',
 ];
 
@@ -23,10 +21,21 @@ const Navbar = () => {
   const [active, setActive] = useState('home'); // default to first section
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: '#ffffff', color: 'black' }}>
+    <AppBar 
+      position="sticky" 
+      levation={4} 
+      sx={{ 
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        backdropFilter: 'blur(12px)',
+        color: '#fff',
+        boxShadow: '0 2px 4px rgba(255, 255, 255, 0.1)',
+        transition: 'background-color 0.3s ease',
+        py: 1.5,
+      }}
+      >
       <Container maxWidth="xl">
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
             My Portfolio
           </Typography>
 
