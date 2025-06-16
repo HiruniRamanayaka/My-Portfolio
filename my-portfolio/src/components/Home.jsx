@@ -30,7 +30,7 @@ const Home = () => {
           </Box>
 
           {/* Image Section */}
-          <Box sx={{ textAlign: 'right', flex: 1 }}>
+          <Box sx={{ position: 'relative', flex: 1 , textAlign: 'center' }}>
             <Box
               component="img"
               src={image}
@@ -40,10 +40,29 @@ const Home = () => {
                 width: '100%',
                 borderRadius: '50%',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                position: 'relative',
+                zIndex: 2,
                 transition: 'transform 0.3s',
                 '&:hover': { transform: 'scale(1.05)' }
               }}
             />
+            <Box
+              component="svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 480 480"
+              sx={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '100%',
+                height: '100%',
+                zIndex: 1,
+                opacity: 0.4
+              }}
+            >
+              <path d="M120 120h120v120H120zM0 240h120v120H0zM120 360h120v120H120zM0 0h120v120H0zM360 120h120v120H360zM240 240h120v120H240zM360 360h120v120H360zM240 0h120v120H240z" fill="#000000" />
+            </Box>
           </Box>
         </Box>
       </Container>
