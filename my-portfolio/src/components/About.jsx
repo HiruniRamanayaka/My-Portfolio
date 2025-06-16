@@ -1,11 +1,13 @@
 import React from 'react'
 import {Container} from '@mui/material'
+import Bio from './Bio.jsx'
 
 const About = () => {
   return (
     <>
         <Container id="about">
-            <div>About</div>
+            <h1>ABOUT</h1>
+            <Bio />
         </Container>
     </>
   )
