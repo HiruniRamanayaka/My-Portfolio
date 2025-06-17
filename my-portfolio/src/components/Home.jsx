@@ -20,7 +20,7 @@ const Home = () => {
               Software Engineering Undergraduate
             </Typography>
             <Box sx={{ mt: 8 }}>
-              <Button variant="contained" size="large" sx={{ mr: 2 }} href="#projects">
+              <Button variant="contained" size="large" sx={{ mr: 5 }} href="#projects">
                 View My Work
               </Button>
               <Button variant="outlined" size="large" color="primary" href={CV} download>
@@ -30,7 +30,7 @@ const Home = () => {
           </Box>
 
           {/* Image Section */}
-          <Box sx={{ position: 'relative', flex: 1 , textAlign: 'center' }}>
+          <Box sx={{ position: 'relative' , textAlign: 'center' }}>
             <Box
               component="img"
               src={image}

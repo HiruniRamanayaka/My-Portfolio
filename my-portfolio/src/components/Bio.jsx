@@ -12,18 +12,18 @@ const Bio = () => {
                 <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 3, color: '#00bcd4' }}>
                     About Me
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 2, color: textColor, lineHeight: 1.8 }}>
+                <Typography variant="body1" sx={{ mb: 2, color: textColor, lineHeight: 1.5 }}>
                     I am Hiruni Ramanayaka, a dedicated undergraduate pursuing a Bachelor of Science (Honours) in Software Engineering at the University of Kelaniya. With a strong interest in full-stack development, I am passionate about creating user-centric, modern web applications that deliver seamless experiences.
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 2, color: textColor, lineHeight: 1.8 }}>
+                <Typography variant="body1" sx={{ mb: 2, color: textColor, lineHeight: 1.5 }}>
                     I have experience working on both individual and team-based projects that demonstrate my skills. I am constantly exploring new tools and frameworks to enhance my knowledge and improve the quality of my work.
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 2, color: textColor, lineHeight: 1.8 }}>
+                <Typography variant="body1" sx={{ mb: 2, color: textColor, lineHeight: 1.5 }}>
                     In addition to academics, I actively contribute to volunteer organizations and leadership initiatives, where I continue to grow as a professional and a team player. My goal is to become a versatile software engineer capable of solving real-world problems through innovative solutions.
                 </Typography>
             </Box>
             <Box sx={{ textAlign: 'left', mt: 10, ml: 2}}>
-                <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2, color: textColor }}>
                     Contact Details
                 </Typography>
                 <Divider sx={{ mb: 2 }} />

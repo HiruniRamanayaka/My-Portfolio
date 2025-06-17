@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <AppBar 
       position="sticky" 
-      levation={4} 
+      elevation={4} 
       sx={{ 
         backgroundColor: 'rgba(0, 0, 0, 0.2)',
         backdropFilter: 'blur(12px)',
