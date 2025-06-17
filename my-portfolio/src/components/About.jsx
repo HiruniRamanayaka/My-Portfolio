@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Container, Link, Typography, Box} from '@mui/material'
 import Bio from './Bio.jsx'
 import Education from './Education.jsx'
-// import Experience from './Experience.jsx'
+import Experience from './Experience.jsx'
 import Achievements from './Achievements.jsx'
 
 const sections = [
@@ -51,7 +51,7 @@ const About = () => {
         transition: 'background-color 0.3s ease', }}>
           {active === "bio" && <Bio />}
           {active === "education" && <Education />}
-          {/* {active === "experience" && <Experience />} */}
+          {active === "experience" && <Experience />}
           {active === "achievements" && <Achievements />}
         </Box>
 
