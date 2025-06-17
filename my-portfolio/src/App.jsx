@@ -5,7 +5,6 @@ import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Certificates from './components/Certificates';
 import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Achievements from './components/Achievements';
@@ -20,11 +19,8 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Certificates />
       <Blogs />
       <Contact />
-      <Achievements />
-
     </Box>
   )
 }
