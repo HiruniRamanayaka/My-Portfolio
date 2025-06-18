@@ -9,6 +9,7 @@ import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import {Box} from '@mui/material'
+import Sidebar from './components/Sidebar';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Projects />
       <Blogs />
       <Contact />
+      <Sidebar />
       <Footer />
     </Box>
   )
