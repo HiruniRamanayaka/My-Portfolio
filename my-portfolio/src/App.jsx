@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blogs from './components/Blogs';
 import Contact from './components/Contact';
-import Achievements from './components/Achievements';
+import Footer from './components/Footer';
 import {Box} from '@mui/material'
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
       <Projects />
       <Blogs />
       <Contact />
+      <Footer />
     </Box>
   )
 }
