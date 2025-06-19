@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -18,7 +18,38 @@ const sections = [
 ];
 
 const Navbar = () => {
-  const [active, setActive] = useState('home'); // default to first section
+  const [active, setActive] = useState('home'); 
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.6, // 60% of the section must be visible to trigger
+      }
+    );
+
+    sections.forEach((id) => {
+      // // attaching the observer to each element with an ID
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // removing the observer when the component unmounts
+    return () => {                  
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
 
   return (
     <AppBar 
