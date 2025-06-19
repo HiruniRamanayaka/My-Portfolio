@@ -90,7 +90,7 @@ const Certificates = () => {
   return (
     <Container id="certificates" sx={{ py: 4 }}>
 
-      <Grid container spacing={4} alignItems="stretch">
+      <Grid container spacing={2} alignItems="stretch">
         {displayedCertificates.map((cert, index) => (
           <Grid item xs={12} sm={6} md={4} key={index} display="flex">
             <Card
@@ -103,13 +103,12 @@ const Certificates = () => {
                 border: '1px solid #333',
                 color: '#f0f0f0',
                 borderRadius: 2,
-                px: 2,
-                py: 1,
+             
                 boxShadow: '0 0 10px rgba(0,0,0,0.3)',
               }}
             >
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Box display="flex" alignItems="center" mb={2}>
+              <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
+                <Box display="flex" alignItems="center" mb={1}>
                   <SchoolIcon sx={{ mr: 1, color: '#90caf9' }} />
                   <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
                     {cert.title}
@@ -119,13 +118,13 @@ const Certificates = () => {
                   Issued by <strong>{cert.issuer}</strong> • {cert.date}
                 </Typography>
                 {cert.link && (
-                  <Box mt={1}>
+                  <Box display="flex" justifyContent="center">
                     <Link
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       underline="hover"
-                      sx={{ color: '#90caf9', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 0.5  }}
+                      sx={{ color: '#90caf9', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 0.5, fontSize: '0.8rem' }}
                     >
                       <InsertLinkIcon fontSize="small"/>
                       View Certificate

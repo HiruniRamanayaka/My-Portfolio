@@ -36,7 +36,7 @@ const Badges = () => {
                     style={{ objectFit: 'contain', padding: '1rem', backgroundColor: '#2a2a2a' }}
                 />
                 <CardContent>
-                    <Typography variant="h6" sx={{ color: '#ffffff', fontWeight: 'bold' }}>
+                    <Typography variant="subtitle" sx={{ color: '#ffffff', fontWeight: 'bold' }}>
                         {badge.title}
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#cccccc' }}>
@@ -46,7 +46,7 @@ const Badges = () => {
                         href={badge.link} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        style={{ color: '#90caf9', textDecoration: 'none' }}
+                        style={{ color: '#90caf9', textDecoration: 'none', fontSize: '0.8rem' }}
                     >
                         View Credential
                     </a>

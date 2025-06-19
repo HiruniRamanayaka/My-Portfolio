@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <Container id="contact" maxWidth="lg" sx={{ padding: '2rem', textAlign: 'center' }}>
       <Typography variant="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
-        Contact
+        CONTACT
       </Typography>
 
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', gap: 5 }}>
