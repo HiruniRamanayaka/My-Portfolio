@@ -44,12 +44,6 @@ const blogs = [
     image: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*D8hoCPLKjlZIVOHUxYPX2Q.png',
     link: 'https://medium.com/@hiruniramanayaka9/how-to-use-github-through-vs-code-without-using-command-prompt-a-beginners-guide-f635865175da',
   },
-  // {
-  //   title: '',
-  //   content: '',
-  //   image: '',
-  //   link: '',
-  // },
 ];
 
 
