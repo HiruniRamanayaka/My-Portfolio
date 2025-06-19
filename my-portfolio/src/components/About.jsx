@@ -47,8 +47,15 @@ const About = () => {
           ))}
         </Box>
 
-        <Box sx={{ mt: 2, p: 6, borderRadius: "10px", backgroundColor: "rgba(0,0,0,0.2)", boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-        transition: 'background-color 0.3s ease', }}>
+        <Box 
+          sx={{ 
+            mt: 2, 
+            p: 6, 
+            borderRadius: "10px", 
+            backgroundColor: "rgba(0,0,0,0.2)", 
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+            transition: 'background-color 0.3s ease', }}
+        >
           {active === "bio" && <Bio />}
           {active === "education" && <Education />}
           {active === "experience" && <Experience />}
