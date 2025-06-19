@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Box, Typography, TextField, Button } from '@mui/material';
-import image from '../assets/Mobile-bro.png';
 
 const inputStyle = {
   '& .MuiOutlinedInput-root': {
@@ -31,22 +30,13 @@ const Contact = () => {
 
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', gap: 5 }}>
         {/* Left Section */}
-        <Box sx={{ flex: 1, textAlign: 'left', pl: 5 }}>
-          <Box
-            component="img"
-            src={image}
-            alt="contact"
-            sx={{
-              maxWidth: '300px',
-              width: '100%',
-            }}>
-          </Box>
+        <Box sx={{ flex: 1, textAlign: 'left', pl: 5, py: 5 }}>
           <Typography variant="body1">Whether it's a collaboration, question, or just a hello,</Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>I’d love to hear from you.</Typography>
-          <Typography sx={{display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center'}}>
+          <Typography sx={{display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center', pt: 3}}>
             <i className="fa fa-envelope" aria-hidden="true"></i>
             <strong>Email:</strong> hiruniramanayaka9@gmail.com</Typography>
-          <Typography sx={{display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center'}}>
+          <Typography sx={{display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center', pt: 1}}>
             <i className="fa fa-phone" aria-hidden="true"></i>
             <strong>Phone:</strong> +94 777397226</Typography>
         </Box>
