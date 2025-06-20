@@ -7,18 +7,6 @@ import {
   CardContent,
   Box,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
-
-// Hover effect styling
-const HoverCard = styled(Card)(({ theme }) => ({
-  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  '&:hover': {
-    transform: 'scale(1.05)',
-    boxShadow: theme.shadows[6],
-  },
-  backgroundColor: 'rgba(0,0,0,0.6)',
-  color: '#fff',
-}));
 
 const skillsData = [
   {
@@ -28,7 +16,7 @@ const skillsData = [
     ],
   },
   {
-    category: 'Languages',
+    category: 'Languages & Frameworks',
     sections: [
       {
         title: 'Using Now',
@@ -45,10 +33,11 @@ const skillsData = [
         title: 'Learning',
         skills: [
           { name: 'Spring Boot', icon: './Icons/springboot.svg' },
-          { name: 'React Native', icon: './Icons/react-native.svg' },
-          { name: 'TypeScript', icon: './Icons/typescript.svg' },
           { name: 'Kotlin', icon: './Icons/kotlin.svg' },
           { name: 'Flutter', icon: './Icons/flutter.svg' },
+          { name: 'Express.js', icon: './Icons/expressJs.svg' },
+          { name: 'Node.js', icon: './Icons/nodeJs.svg' },
+          { name: 'MongoDB', icon: './Icons/mongodb.svg' },
         ],
       },
       {
@@ -58,6 +47,8 @@ const skillsData = [
           { name: 'Java', icon: './Icons/java.svg' },
           { name: 'Python', icon: './Icons/python.svg' },
           { name: 'PHP', icon: './Icons/php.svg' },
+          { name: 'React Native', icon: './Icons/react-native.svg' },
+          { name: 'TypeScript', icon: './Icons/typescript.svg' },
         ],
       },
     ],
@@ -80,9 +71,19 @@ const SkillsCard = () => {
       <Grid container spacing={3} justifyContent="center">
         {skillsData.map((category, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <HoverCard>
+            <Card
+              sx={{
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                  boxShadow: 6,
+                },
+                backgroundColor: 'rgba(0,0,0,0.6)',
+                color: '#fff',
+              }}
+            >
               <CardContent>
-                <Typography variant="h6" gutterBottom textAlign="center">
+                <Typography variant="h6" gutterBottom textAlign="center" sx={{fontWeight: 'bold'}}>
                   {category.category}
                 </Typography>
 
@@ -90,10 +91,10 @@ const SkillsCard = () => {
                 {category.sections ? (
                   category.sections.map((section, idx) => (
                     <Box key={idx} sx={{ mt: 2 }}>
-                      <Typography variant="subtitle2">{section.title}</Typography>
+                      <Typography variant="subtitle2" sx={{py: 2}}>{section.title}</Typography>
                       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mt: 1 }}>
                         {section.skills.map((skill, i) => (
-                          <Box key={i} sx={{ textAlign: 'center', width: 60 }}>
+                          <Box key={i} sx={{ textAlign: 'center', width: 60, display:'flex', flexDirection: 'column', gap: 1 }}>
                             <img src={skill.icon} alt={skill.name} width={40} height={40} />
                             <Typography variant="caption" color="#fff">{skill.name}</Typography>
                           </Box>
@@ -113,7 +114,7 @@ const SkillsCard = () => {
                   </Box>
                 )}
               </CardContent>
-            </HoverCard>
+            </Card>
           </Grid>
         ))}
       </Grid>
