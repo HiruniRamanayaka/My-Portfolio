@@ -11,8 +11,8 @@ import {
 const sections = [
   'home',
   'about',
-  'projects',
   'skills',
+  'projects',
   'blogs',
   'contact',
 ];
