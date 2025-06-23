@@ -62,14 +62,15 @@ const projects = [
 
 const Frontend = () => {
   return (
-    <Container id="frontend">
+    <Container id="frontend" disableGutters sx={{pt: 5}}>
       <Grid container spacing={3}>
         {projects.map((project, index) => (
           <Grid item xs={12} md={6} key={index}>
+            <Box sx={{ height: '100%', alignItems: 'center' }}>
             <Card
               sx={{
                 position: 'relative',
-                height: 320,
+                height: 230,
                 borderRadius: 4,
                 boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
                 overflow: 'hidden',
@@ -80,7 +81,7 @@ const Frontend = () => {
             >
               <CardMedia
                 component="img"
-                height="320"
+                height="230"
                 image={project.image}
                 alt={project.title}
                 sx={{
@@ -161,6 +162,7 @@ const Frontend = () => {
                 </Box>
               </Box>
             </Card>
+            </Box>
           </Grid>
         ))}
       </Grid>
