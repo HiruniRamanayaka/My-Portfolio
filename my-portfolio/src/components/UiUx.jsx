@@ -1,10 +1,11 @@
 import React from 'react'
-import { Card, CardMedia, CardContent, Typography, Button, Box, Container, Grid } from '@mui/material';
-import image from '../assets/profileImages/figma_.jpg'
+import { Card, CardMedia, Typography, Button, Box, Container, Grid } from '@mui/material';
+import image from '../assets/projectImages/figma_.jpg'
 
 const projects = [
   {
     title: 'UI/UX Design for Library Management System',
+    image: image,
     tech: 'Figma',
     description: 'A modern and user-friendly interface designs for a Library Management System, focusing on enhancing user experience for users and administrators.',
     points : [
@@ -40,7 +41,7 @@ const UiUx = () => {
               <CardMedia
                 component="img"
                 height="320"
-                image={image}
+                image={project.image}
                 alt={project.title}
                 sx={{
                   transition: 'transform 0.4s ease, filter 0.4s ease',
