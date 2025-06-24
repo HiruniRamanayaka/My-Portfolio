@@ -4,8 +4,8 @@ import {Container, Typography, Box} from '@mui/material'
 const Education = () => {
   return (
     <>
-        <Container id="education">
-          <Box sx={{ display: 'flex', gap: 8 }}>
+        <Container id="education" sx={{ py: 6 }}>
+          <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 4, md: 8 } }}>
             <Box sx={{ textAlign: 'left', flex: 1, borderLeft: 1, borderColor: 'grey.300', pl: 2 }}>
               <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2, lineHeight: 1.6, color: "primary.light"}}>Bachelor of Science (Hons) in Software Engineering</Typography>
               <Typography variant="body1" sx={{lineHeight: 1.6}}>University of Kelaniya</Typography>
