@@ -17,6 +17,7 @@ const sections = [
 
 const Projects = () => {
   const [active, setActive] = useState("all");
+  const [showAll, setShowAll] = useState(false);
   return (
     <>
       <Container id="projects" maxWidth="lg" sx={{ padding: "2rem", textAlign: "center" }}>
@@ -30,7 +31,10 @@ const Projects = () => {
               key={id}
               href={`#${id}`}
               underline="none"
-              onClick={() => setActive(id)}
+              onClick={() => {
+                setActive(id);
+                setShowAll(false);
+              }}
               sx={{
                 padding: "0.5rem 1rem",
                 fontWeight: active === id ? "bold" : "normal",
@@ -59,13 +63,48 @@ const Projects = () => {
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
             transition: 'background-color 0.3s ease', }}
         >
-          {(active === "all" || active === "group") && <Group />}
-          {(active === "all" || active === "mobile") && <Mobile />}
-          {(active === "all" || active === "ui/ux") && <UiUx />}
-          {(active === "all" || active === "frontend") && <Frontend />}
-          {(active === "all" || active === "backend") && <Backend />}
-        </Box>
+          {active === 'all' && (
+          <>
+            <Group />
+            {!showAll ? null : (
+              <>
+                <Mobile />
+                <UiUx />
+                <Frontend />
+                <Backend />
+              </>
+            )}
+          </>
+        )}
+        {active === 'group' && <Group />}
+        {active === 'mobile' && <Mobile />}
+        {active === 'ui/ux' && <UiUx />}
+        {active === 'frontend' && <Frontend />}
+        {active === 'backend' && <Backend />}
 
+        {active === 'all' && (
+          <Box sx={{ mt: 3 }}>
+            <Link
+              component="button"
+              onClick={() => setShowAll(!showAll)}
+              underline="none"
+              sx={{
+                fontWeight: 'bold',
+                color: 'primary.main',
+                display: 'inline-flex',
+                alignItems: 'center',
+                fontSize: '1rem',
+                '&:hover': {
+                  color: 'primary.dark',
+                  textDecoration: 'underline',
+                },
+              }}
+            >
+              {showAll ? 'Show Less ▲' : 'Show More ▼'}
+            </Link>
+          </Box>
+        )}
+        </Box>
       </Container>
     </>
   )

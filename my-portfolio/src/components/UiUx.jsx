@@ -29,7 +29,7 @@ const UiUx = () => {
             <Card
               sx={{
                 position: 'relative',
-                height: 250,
+                height: 230,
                 borderRadius: 4,
                 boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
                 overflow: 'hidden',
@@ -40,7 +40,7 @@ const UiUx = () => {
             >
               <CardMedia
                 component="img"
-                height="250"
+                height="230"
                 image={project.image}
                 alt={project.title}
                 sx={{
