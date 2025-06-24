@@ -13,7 +13,7 @@ const projects = [
       'User-friendly navigation for book search and borrowing',
       'Responsive design mockups for web and mobile views',
     ],
-    demo: 'https://youtu.be/8rCoxMbMgt4',
+    demo: 'https://youtu.be/VNWhOhA2-oA?si=YNeaYpbDVqLITGya',
     userInterfaceLink: 'https://www.figma.com/proto/AL9NglUXMEOxTPeL9Si6tb/Library-Management-System--User-Interfaces-?node-id=607-9&t=qbRjgytPqJPhMwTO-1',
     adminInterfaceLink: 'https://www.figma.com/proto/PKAPucSpb4Tly5Q8rPiVKu/Admin-interfaces?node-id=0-1&t=Ro1oooU6VRY6fI0Q-1',
     mobileInterfaceLink: 'https://www.figma.com/proto/z2yrl3HaBU8jh89xGXetvA/Alternative?node-id=0-1&t=Y31SRMixw2BbnC1W-1',

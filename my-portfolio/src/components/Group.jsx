@@ -30,7 +30,7 @@ const projects = [
       'QR code scanning for fuel usage at fuel stations',
       'Notifications sent to vehicle owners after fuel pumping (via SMS using Twilio)',
     ],
-    demo: 'https://youtu.be/lHFW4luemp8',
+    demo: 'https://drive.google.com/file/d/1VYaZcNwHm9_HsmkjCH64vb7C4WGG4iNH/view?usp=sharing',
     repository: 'https://github.com/pubudu2003060/SENG-22212-Group-Project',
   },
 ]
