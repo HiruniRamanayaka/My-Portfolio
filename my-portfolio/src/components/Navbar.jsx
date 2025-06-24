@@ -6,7 +6,16 @@ import {
   Container,
   Link,
   Box,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
 } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useTheme } from '@mui/material/styles';
 
 const sections = [
   'home',
@@ -19,6 +28,10 @@ const sections = [
 
 const Navbar = () => {
   const [active, setActive] = useState('home'); 
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,8 +43,6 @@ const Navbar = () => {
         });
       },
       {
-        root: null,
-        rootMargin: '0px',
         threshold: 0.6, // 60% of the section must be visible to trigger
       }
     );
@@ -65,12 +76,66 @@ const Navbar = () => {
       }}
       >
       <Container maxWidth="xl">
-        <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
             My Portfolio
           </Typography>
 
-          <nav>
+          {isMobile ? (
+              <>
+                <IconButton onClick={() => setDrawerOpen(true)} sx={{ color: '#fff' }}>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer 
+                  anchor="right" 
+                  open={drawerOpen} 
+                  onClose={() => setDrawerOpen(false)}  
+                >
+                  <Box 
+                    sx={{
+                      width: 250,
+                      p: 2,
+                      height: '100%',
+                      backgroundColor: 'rgba(0,0,0,0.9)',
+                      backdropFilter: 'blur(6px)',
+                    }}
+                  >
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
+                      <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: 'white' }}>
+                        <CloseIcon />
+                      </IconButton>
+                    </Box>
+                    <List>
+                      {sections.map((id) => (
+                        <ListItem
+                          button
+                          key={id}
+                          onClick={() => {
+                            setActive(id);
+                            setDrawerOpen(false);
+                          }}
+                          component="a"
+                          href={`#${id}`}
+                          sx={{
+                            borderBottom: active === id ? '2px solid white' : '2px solid transparent',
+                            transition: 'border-color 0.3s ease',
+                          }}
+                        >
+                          <Typography
+                            sx={{
+                              fontWeight: active === id ? 'bold' : 'normal',
+                              color: active === id ? 'white' : 'white',
+                            }}
+                          >
+                            {id.toUpperCase()}
+                          </Typography>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                </Drawer>
+              </>
+            ) : (
             <Box sx={{ display: 'flex', gap: 2 }}>
               {sections.map((id) => (
                 <Link
@@ -91,7 +156,7 @@ const Navbar = () => {
                 </Link>
               ))}
             </Box>
-          </nav>
+          )}
         </Toolbar>
       </Container>
     </AppBar>
