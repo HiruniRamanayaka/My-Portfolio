@@ -38,7 +38,7 @@ const projects = [
 
 const Mobile = () => {
   return (
-    <Container id="mobile" disableGutters sx={{pt: 5}}>
+    <Container id="mobile" disableGutters sx={{pt: 2}}>
       <Grid container spacing={3}>
         {projects.map((project, index) => (
           <Grid item xs={12} md={6} key={index}>

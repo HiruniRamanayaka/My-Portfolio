@@ -60,8 +60,8 @@ const Projects = () => {
             transition: 'background-color 0.3s ease', }}
         >
           {(active === "all" || active === "group") && <Group />}
-          {(active === "all" || active === "ui/ux") && <UiUx />}
           {(active === "all" || active === "mobile") && <Mobile />}
+          {(active === "all" || active === "ui/ux") && <UiUx />}
           {(active === "all" || active === "frontend") && <Frontend />}
           {(active === "all" || active === "backend") && <Backend />}
         </Box>

@@ -3,7 +3,7 @@ import {Card, CardMedia, Typography, Button, Box, Container, Grid } from '@mui/m
 import imageTodo from '../assets/projectImages/Todo-list.jpg'
 import imageWeather from '../assets/projectImages/weather-app.jpg'
 import imageRecipe from '../assets/projectImages/recipe-book.jpg'
-import imageTicTacToe from '../assets/projectImages/tic-tac-toe_.jpg'
+import imageTicTacToe from '../assets/projectImages/tic-tac-toe_.png'
 
 const projects = [
   {
@@ -35,12 +35,12 @@ const projects = [
   {
     title: 'Recipe Book',
     image: imageRecipe,
-    tech: 'HTML, CSS, JavaScript',
+    tech: 'HTML, CSS, JavaScript, TheMealDB API',
     description: 'A digital recipe book where users can browse and save their favorite recipes.',
     points : [
       'List of recipes with images',
       'Search and filter by category',
-      '',
+      'Detailed recipe view with ingredients and instructions',
     ],
     demo: 'https://youtu.be/yN6cW6KFQxY',
     repository: 'https://github.com/HiruniRamanayaka/Recipe-Book',

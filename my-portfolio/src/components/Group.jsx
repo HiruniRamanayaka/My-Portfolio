@@ -37,7 +37,7 @@ const projects = [
 
 const Group = () => {
   return (
-    <Container id="group" disableGutters>
+    <Container id="group" disableGutters sx={{pt: 2}}>
       <Grid container spacing={3}>
         {projects.map((project, index) => (
           <Grid item xs={12} md={6} key={index}>
