@@ -20,7 +20,7 @@ const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   return (
     <>
-      <Container id="projects" maxWidth="lg" sx={{ padding: "2rem", textAlign: "center" }}>
+      <Container id="projects" maxWidth="lg" sx={{py: 4, textAlign: "center" }}>
         <Typography variant="h1" gutterBottom sx={{ fontWeight: "bold"}}>
           PROJECTS
         </Typography>
