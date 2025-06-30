@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Typography, Button, Box} from '@mui/material'
 import image from '../assets/me3.jpg';
-import CV from '../assets/Cv.pdf';
+import CV from '../assets/CV.pdf';
 
 const Home = () => {
   return (
