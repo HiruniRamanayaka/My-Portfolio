@@ -7,12 +7,34 @@ import {
   CardContent,
   Box,
 } from '@mui/material';
+import figmaLogo from '../assets/Icons/figma.svg';
+import html5Logo from '../assets/Icons/html-5.svg';
+import css3Logo from '../assets/Icons/css3.svg';
+import javascriptLogo from '../assets/Icons/javascript.svg';
+import reactLogo from '../assets/Icons/react.svg';
+import sqlLogo from '../assets/Icons/sql.svg';
+import gitLogo from '../assets/Icons/git.svg';
+import springbootLogo from '../assets/Icons/springboot.svg';
+import kotlinLogo from '../assets/Icons/kotlin.svg';
+import flutterLogo from '../assets/Icons/flutter.svg';
+import expressJsLogo from '../assets/Icons/expressJs.svg';
+import nodeJsLogo from '../assets/Icons/nodeJs.svg';
+import mongodbLogo from '../assets/Icons/mongodb.svg';
+import cLogo from '../assets/Icons/c.svg';
+import javaLogo from '../assets/Icons/java.svg';
+import pythonLogo from '../assets/Icons/python.svg';
+import phpLogo from '../assets/Icons/php.svg';
+import reactnativeLogo from '../assets/Icons/react-native.svg';
+import typescriptLogo from '../assets/Icons/typescript.svg';
+import photoshopLogo from '../assets/Icons/photoshop.svg';
+import canvaLogo from '../assets/Icons/canva.svg';
+
 
 const skillsData = [
   {
     category: 'UI/UX',
     skills: [
-      { name: 'Figma', icon: '/My-Portfolio/Icons/figma.svg' },
+      { name: 'Figma', icon: figmaLogo },
     ],
   },
   {
@@ -21,34 +43,34 @@ const skillsData = [
       {
         title: 'Using Now',
         skills: [
-          { name: 'HTML5', icon: '/My-Portfolio/Icons/html-5.svg' },
-          { name: 'CSS', icon: '/My-Portfolio/Icons/css3.svg' },
-          { name: 'JavaScript', icon: '/My-Portfolio/Icons/javascript.svg' },
-          { name: 'React', icon: '/My-Portfolio/Icons/react.svg' },
-          { name: 'MySQL', icon: '/My-Portfolio/Icons/sql.svg' },
-          { name: 'Git', icon: '/My-Portfolio/Icons/git.svg' },
+          { name: 'HTML5', icon: html5Logo },
+          { name: 'CSS', icon: css3Logo },
+          { name: 'JavaScript', icon: javascriptLogo },
+          { name: 'React', icon: reactLogo },
+          { name: 'MySQL', icon: sqlLogo },
+          { name: 'Git', icon: gitLogo },
         ],
       },
       {
         title: 'Learning',
         skills: [
-          { name: 'Spring Boot', icon: '/My-Portfolio/Icons/springboot.svg' },
-          { name: 'Kotlin', icon: '/My-Portfolio/Icons/kotlin.svg' },
-          { name: 'Flutter', icon: '/My-Portfolio/Icons/flutter.svg' },
-          { name: 'Express.js', icon: '/My-Portfolio/Icons/expressJs.svg' },
-          { name: 'Node.js', icon: '/My-Portfolio/Icons/nodeJs.svg' },
-          { name: 'MongoDB', icon: '/My-Portfolio/Icons/mongodb.svg' },
+          { name: 'Spring Boot', icon: springbootLogo },
+          { name: 'Kotlin', icon: kotlinLogo },
+          { name: 'Flutter', icon: flutterLogo },
+          { name: 'Express.js', icon: expressJsLogo },
+          { name: 'Node.js', icon: nodeJsLogo },
+          { name: 'MongoDB', icon: mongodbLogo },
         ],
       },
       {
         title: 'Other Skills',
         skills: [
-          { name: 'C', icon: '/My-Portfolio/Icons/c.svg' },
-          { name: 'Java', icon: '/My-Portfolio/Icons/java.svg' },
-          { name: 'Python', icon: '/My-Portfolio/Icons/python.svg' },
-          { name: 'PHP', icon: '/My-Portfolio/Icons/php.svg' },
-          { name: 'React Native', icon: '/My-Portfolio/Icons/react-native.svg' },
-          { name: 'TypeScript', icon: '/My-Portfolio/Icons/typescript.svg' },
+          { name: 'C', icon: cLogo },
+          { name: 'Java', icon: javaLogo },
+          { name: 'Python', icon: pythonLogo },
+          { name: 'PHP', icon: phpLogo },
+          { name: 'React Native', icon: reactnativeLogo },
+          { name: 'TypeScript', icon: typescriptLogo },
         ],
       },
     ],
@@ -56,8 +78,8 @@ const skillsData = [
   {
     category: 'Graphic Design',
     skills: [
-      { name: 'Photoshop', icon: '/My-Portfolio/Icons/photoshop.svg' },
-      { name: 'Canva', icon: '/My-Portfolio/Icons/canva.svg' },
+      { name: 'Photoshop', icon: photoshopLogo },
+      { name: 'Canva', icon: canvaLogo },
     ],
   },
 ];
