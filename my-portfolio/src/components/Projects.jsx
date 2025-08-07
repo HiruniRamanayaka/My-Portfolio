@@ -5,6 +5,7 @@ import UiUx from './UiUx.jsx'
 import Mobile from './Mobile'
 import Frontend from './Frontend'
 import Backend from './Backend'
+import Fullstack from './Fullstack.jsx'
 
 const sections = [
   'all',
@@ -13,6 +14,7 @@ const sections = [
   'mobile',
   'frontend',
   'backend',
+  'fullstack',
 ]
 
 const Projects = () => {
@@ -81,6 +83,7 @@ const Projects = () => {
         {active === 'ui/ux' && <UiUx />}
         {active === 'frontend' && <Frontend />}
         {active === 'backend' && <Backend />}
+        {active === 'fullstack' && <Fullstack />}
 
         {active === 'all' && (
           <Box sx={{ mt: 3 }}>
