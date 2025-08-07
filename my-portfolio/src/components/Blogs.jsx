@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { useInView } from 'react-intersection-observer';
+import { styled } from '@mui/material/styles';
 
 const blogs = [
   {
@@ -46,6 +47,18 @@ const blogs = [
   },
 ];
 
+const ScrollBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  overflowX: 'auto',
+  gap: theme.spacing(3),
+  paddingBottom: theme.spacing(2),
+  scrollSnapType: 'x mandatory',
+  scrollbarWidth: 'none', // Firefox
+  msOverflowStyle: 'none', // IE 10+
+  '&::-webkit-scrollbar': {
+    display: 'none', // Chrome, Safari
+  },
+}));
 
 const Blogs = () => {
   return (
@@ -54,18 +67,7 @@ const Blogs = () => {
         BLOGS
       </Typography>
 
-      <Box
-        sx={{
-          display: 'flex',
-          overflowX: 'auto',
-          gap: 3,
-          pb: 2,
-          scrollSnapType: 'x mandatory',
-          '&::-webkit-scrollbar': { display: 'none' },
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
-        }}
-      >
+      <ScrollBox>
         {blogs.map((blog, index) => {
           const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -147,7 +149,8 @@ const Blogs = () => {
             </Card>
           );
         })}
-      </Box>
+      </ScrollBox>
+
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 3}}>
         <Typography variant='caption' gutterBottom>← Scroll to explore →</Typography>
         <Button variant="contained" size="small" sx={{ mt: 1, px: 3 }} href="https://medium.com/@hiruniramanayaka9" target="_blank" rel="noopener noreferrer">View More</Button>

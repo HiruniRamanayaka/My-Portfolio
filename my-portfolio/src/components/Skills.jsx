@@ -12,7 +12,7 @@ const skillsData = [
   {
     category: 'UI/UX',
     skills: [
-      { name: 'Figma', icon: './Icons/figma.svg' },
+      { name: 'Figma', icon: '/My-Portfolio/Icons/figma.svg' },
     ],
   },
   {
@@ -21,34 +21,34 @@ const skillsData = [
       {
         title: 'Using Now',
         skills: [
-          { name: 'HTML5', icon: './Icons/html-5.svg' },
-          { name: 'CSS', icon: './Icons/css3.svg' },
-          { name: 'JavaScript', icon: './Icons/javascript.svg' },
-          { name: 'React', icon: './Icons/react.svg' },
-          { name: 'MySQL', icon: './Icons/sql.svg' },
-          { name: 'Git', icon: './Icons/git.svg' },
+          { name: 'HTML5', icon: '/My-Portfolio/Icons/html-5.svg' },
+          { name: 'CSS', icon: '/My-Portfolio/Icons/css3.svg' },
+          { name: 'JavaScript', icon: '/My-Portfolio/Icons/javascript.svg' },
+          { name: 'React', icon: '/My-Portfolio/Icons/react.svg' },
+          { name: 'MySQL', icon: '/My-Portfolio/Icons/sql.svg' },
+          { name: 'Git', icon: '/My-Portfolio/Icons/git.svg' },
         ],
       },
       {
         title: 'Learning',
         skills: [
-          { name: 'Spring Boot', icon: './Icons/springboot.svg' },
-          { name: 'Kotlin', icon: './Icons/kotlin.svg' },
-          { name: 'Flutter', icon: './Icons/flutter.svg' },
-          { name: 'Express.js', icon: './Icons/expressJs.svg' },
-          { name: 'Node.js', icon: './Icons/nodeJs.svg' },
-          { name: 'MongoDB', icon: './Icons/mongodb.svg' },
+          { name: 'Spring Boot', icon: '/My-Portfolio/Icons/springboot.svg' },
+          { name: 'Kotlin', icon: '/My-Portfolio/Icons/kotlin.svg' },
+          { name: 'Flutter', icon: '/My-Portfolio/Icons/flutter.svg' },
+          { name: 'Express.js', icon: '/My-Portfolio/Icons/expressJs.svg' },
+          { name: 'Node.js', icon: '/My-Portfolio/Icons/nodeJs.svg' },
+          { name: 'MongoDB', icon: '/My-Portfolio/Icons/mongodb.svg' },
         ],
       },
       {
         title: 'Other Skills',
         skills: [
-          { name: 'C', icon: './Icons/c.svg' },
-          { name: 'Java', icon: './Icons/java.svg' },
-          { name: 'Python', icon: './Icons/python.svg' },
-          { name: 'PHP', icon: './Icons/php.svg' },
-          { name: 'React Native', icon: './Icons/react-native.svg' },
-          { name: 'TypeScript', icon: './Icons/typescript.svg' },
+          { name: 'C', icon: '/My-Portfolio/Icons/c.svg' },
+          { name: 'Java', icon: '/My-Portfolio/Icons/java.svg' },
+          { name: 'Python', icon: '/My-Portfolio/Icons/python.svg' },
+          { name: 'PHP', icon: '/My-Portfolio/Icons/php.svg' },
+          { name: 'React Native', icon: '/My-Portfolio/Icons/react-native.svg' },
+          { name: 'TypeScript', icon: '/My-Portfolio/Icons/typescript.svg' },
         ],
       },
     ],
@@ -56,8 +56,8 @@ const skillsData = [
   {
     category: 'Graphic Design',
     skills: [
-      { name: 'Photoshop', icon: './Icons/photoshop.svg' },
-      { name: 'Canva', icon: './Icons/canva.svg' },
+      { name: 'Photoshop', icon: '/My-Portfolio/Icons/photoshop.svg' },
+      { name: 'Canva', icon: '/My-Portfolio/Icons/canva.svg' },
     ],
   },
 ];
@@ -70,7 +70,11 @@ const SkillsCard = () => {
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {skillsData.map((category, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid key={index} item
+            xs={12}
+            sm={index === 1 ? 8 : 4}
+            md={index === 1 ? 6 : 3} 
+          >
             <Card
               sx={{
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
