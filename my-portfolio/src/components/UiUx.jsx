@@ -1,11 +1,12 @@
 import React from 'react'
 import { Card, CardMedia, Typography, Button, Box, Container, Grid } from '@mui/material';
-import image from '../assets/projectImages/figma_.jpg'
+import image1 from '../assets/projectImages/figma_.jpg'
+import image2 from '../assets/projectImages/smoothies_figma.png'
 
 const projects = [
   {
     title: 'UI/UX Design for Library Management System',
-    image: image,
+    image: image1,
     tech: 'Figma',
     description: 'A modern and user-friendly interface designs for a Library Management System, focusing on enhancing user experience for users and administrators.',
     points : [
@@ -14,10 +15,23 @@ const projects = [
       'Responsive design mockups for web and mobile views',
     ],
     demo: 'https://youtu.be/VNWhOhA2-oA?si=YNeaYpbDVqLITGya',
-    userInterfaceLink: 'https://www.figma.com/proto/AL9NglUXMEOxTPeL9Si6tb/Library-Management-System--User-Interfaces-?node-id=607-9&t=qbRjgytPqJPhMwTO-1',
-    adminInterfaceLink: 'https://www.figma.com/proto/PKAPucSpb4Tly5Q8rPiVKu/Admin-interfaces?node-id=0-1&t=Ro1oooU6VRY6fI0Q-1',
-    mobileInterfaceLink: 'https://www.figma.com/proto/z2yrl3HaBU8jh89xGXetvA/Alternative?node-id=0-1&t=Y31SRMixw2BbnC1W-1',
-  }
+    userInterfaceLink: 'https://www.figma.com/design/AL9NglUXMEOxTPeL9Si6tb/Library-Management-System--User-Interfaces-?node-id=607-9&t=xZVMKQn832FktBIP-1',
+    adminInterfaceLink: 'https://www.figma.com/design/PKAPucSpb4Tly5Q8rPiVKu/Admin-interfaces?node-id=0-1&t=cBQQ8uXNhTgsQHIO-1',
+    mobileInterfaceLink: 'https://www.figma.com/design/z2yrl3HaBU8jh89xGXetvA/Alternative?node-id=0-1&t=7V8Y91h21ARiKIYz-1',
+  },
+  {
+    title: 'UI/UX Design for E-commerce Interface for Introducing New Beverage ',
+    image: image2,
+    tech: 'Figma',
+    description: 'An interactive and visually vibrant e-commerce interface for a smoothie brand. Users can explore different flavors, view product details, and make purchases through a clean and modern interface.',
+    points : [
+      'Flavor-themed UI sections (Green, Berry, Orange, Strawberry) for better product segmentation',
+      'Smooth transition from landing page to individual product views with detailed pricing and cart options',
+      'Add-to-cart and checkout-ready product cards with vibrant, brand-consistent color schemes'
+    ],
+    demo: 'https://youtu.be/BWSfruKU9RM',
+    userInterfaceLink: 'https://www.figma.com/design/TMOtM9k64OeVnvPv2sXm43/beverage-mockup?node-id=0-1&t=PQWoELMGCRiAT9J7-1',
+  },
 ]
 
 const UiUx = () => {
