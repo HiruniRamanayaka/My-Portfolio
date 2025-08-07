@@ -69,5 +69,5 @@ Make sure you have Node.js and npm installed.
 ## Author
 Hiruni Ramanayaka
 
-Visit the live portfolio[my-portfolio-beta-hazel-th3c6qzskc.vercel.app](https://my-portfolio-beta-hazel-th3c6qzskc.vercel.app/)
+[Visit the live portfolio](https://my-portfolio-beta-hazel-th3c6qzskc.vercel.app/)
 
