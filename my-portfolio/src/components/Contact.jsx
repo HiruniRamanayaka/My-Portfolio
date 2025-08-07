@@ -31,8 +31,7 @@ const Contact = () => {
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', gap: 5 }}>
         {/* Left Section */}
         <Box sx={{ flex: 1, textAlign: 'left', pl: 5, py: 5 }}>
-          <Typography variant="body1">Whether it's a collaboration, question, or just a hello,</Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>I’d love to hear from you.</Typography>
+          <Typography variant="body1">Open to meaningful collaborations, insightful conversations, and new opportunities.</Typography>
           <Typography sx={{display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center', pt: 3}}>
             <i className="fa fa-envelope" aria-hidden="true"></i>
             <strong>Email:</strong> hiruniramanayaka9@gmail.com</Typography>
